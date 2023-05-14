@@ -1,0 +1,57 @@
+.hero{
+  background-image: url('../images/photos/romato/hero.jpg'), $linear-grad-x-y;
+  height: max(50vh, 400px);
+  display: grid;
+  place-items: center;
+  background-position: -200px 0;
+  
+  &__box{
+    width: 90%;
+    margin: 0 auto;
+    color: $clr--white;
+  }
+
+  &--store {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 53vh;
+    min-height: 300px;
+  }
+  
+  &--home{
+    display: block;
+    padding-top: 45%;
+    height: 90vh;
+    min-height: 400px;
+    max-height: 700px;
+    position: relative;
+  }
+  
+  &__box--home{
+   display: grid;
+   place-items: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .hero{
+    background-position: center;  
+    height: 60vh;
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    &--home{
+      display: grid;
+      align-items: center;
+      height: 60vh;
+      padding: 0;
+    }
+    
+    &__box--home{
+      place-items: unset;
+    }
+    
+  }
+} 
